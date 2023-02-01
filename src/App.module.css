@@ -1,0 +1,45 @@
+.wrapper{
+    max-width: 70rem;
+    margin:2rem auto;
+    padding: 0 1rem;
+    grid-template-columns: 256px 1fr ;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+
+.header{
+    background:var(--gray-700);
+    height:12.5rem;
+    display:flex;
+    align-itens:center;
+}
+
+.logo{
+    margin:auto;
+    height:3rem;
+}
+.main{
+    height:100vh;
+    background:var(--gray-500);
+}
+.tasker{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    width:46rem;
+    margin:auto;
+
+}
+.progress{
+    display:flex;
+    justify-content:space-between;
+    
+}
+.taskNumber{
+    color:var(--blue);
+}
+   
+.taskFinished{
+    color:var(--purple);
+}
