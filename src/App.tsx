@@ -17,8 +17,12 @@ export function App() {
             <div className={style.progress}>
               <p className={style.taskNumber}>Tarefas criadas</p>
               <p className={style.taskFinished}>Concluídas</p>
+            </div >
+              <div className={style.taskList}>
+              <TaskList />
+              <TaskList />
+              <TaskList />
             </div>
-            <TaskList />
           </div>
 
         </main>

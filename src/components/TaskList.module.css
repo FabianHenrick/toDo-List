@@ -1,0 +1,69 @@
+.task{
+    display:flex;
+    flex-direction:row;
+    align-items: flex-start;
+    background:var(--gray-500);
+    border: 1px solid var(--gray-400);
+    border-radius:8px;
+    height:4.5rem;
+    padding:1rem;
+    gap:0.75rem;
+    justify-content:space-between;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0; 
+}
+
+
+.checkbox{
+    display:none;
+}
+.checkmark{
+    position:absolute;
+    height:1.2rem;
+    width:1.2rem;
+    background-color:transparent;
+    border: solid 1px var(--blue);
+    border-radius:100%;
+
+}
+.checkbox:checked~.checkmark{
+    background-color:var(--purple-dark);
+    border: solid 1px var(--purple-dark);
+    
+}
+
+ .checkmark:after{
+    content:"";
+    position:absolute;
+    display:none;
+    left:9px;
+    top:5px;
+    width:5px;
+    heigh:10px;
+    border:solid white;
+    border-width:0 3px 3px 0;
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.checkboxk:checked~.checkmark:after{
+    display:block;
+
+}
+
+.tasklabel{
+    width: 632px;
+    height: 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.trashIcon{
+    cursor:pointer;
+    border-radius:4px;
+}
