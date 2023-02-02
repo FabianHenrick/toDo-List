@@ -1,16 +1,20 @@
 import { Trash } from "phosphor-react"
-import style from './TaskList.module.css'
+import style from './Task.module.css'
 
-interface taskListProps{
-   task:string;
 
+
+interface taskProps{
+    
+    content:string;
+    onDeleteTask:(tasks:string) => void;
+ 
 }
 
 
-export function TaskList(props:taskListProps){
+export function Task(props:taskProps){
    
-   function handleDeletetask(){
-    console.log('deletado')
+   function handleDeleteTask(){
+    props.onDeleteTask(props.content)
    }
 
    return(
@@ -20,12 +24,12 @@ export function TaskList(props:taskListProps){
                     <input className={style.checkbox} type='checkbox'></input>
                     <span className={style.checkmark}></span>
                 </label> 
-                    <label className={style.taskLabel}>{props.task}</label>
+                    <p className={style.taskLabel}>{props.content}</p>
                    
                 <Trash
                     className={style.trashIcon}
                     size='24'
-                    onClick={handleDeletetask}
+                    onClick={handleDeleteTask}
                 />
                     
             </div>

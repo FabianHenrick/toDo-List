@@ -36,36 +36,3 @@
     height:3rem;
 }
 
-.tasker{
-   display:flex;
-   flex-direction:column;
-    
-}
-.main{
-    display:flex;
-    flex-direction:column;
-}
-.progress{
-    margin-top:5rem;
-    margin-bottom:1.5rem;
-    display:flex;
-    justify-content:space-between;
-    
-}
-.taskNumber{
-    color:var(--blue);
-}
-   
-.taskFinished{
-    color:var(--purple);
-}
-
-.taskList{
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    gap: 24px;
-    height: 28.18rem;
-    left: 22rem;
-    top: 18.18rem;
-}

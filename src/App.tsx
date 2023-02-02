@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import style from './App.module.css'
-import {AddTask} from './components/AddTask'
-import {TaskList} from './components/TaskList'
+import { Task } from './components/Task'
+import {Tasker} from './components/Tasker'
+
 
 
 export function App() {
-
-  let [newTask, setNewtask] = useState<string[]>(['olá mundo'])
 
 
 
@@ -17,33 +16,9 @@ export function App() {
           <img src="./src/assets/Logo.svg" className={style.logo} alt="Logo" />
         </header >
         <main className={style.main}>
-          <AddTask 
-        
+          <Tasker 
+          
           />
-          <div className={style.tasker}>
-            <div className={style.progress}>
-              <div>
-                <p className={style.taskNumber}>Tarefas criadas</p>
-                <p></p>
-              </div>
-              <div>
-                <p className={style.taskFinished}>Concluídas</p>
-                <p></p>
-              </div>
-            </div >
-              <div className={style.taskList}>
-              <TaskList
-                task='beber 2L água hoje!'
-              />
-              <TaskList 
-                task = 'Estudar 2 horas!' 
-              />
-              <TaskList 
-                task = 'Me Exercitar'
-              />
-            </div>
-          </div>
-
         </main>
     </div>
   )
