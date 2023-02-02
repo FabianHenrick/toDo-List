@@ -18,6 +18,7 @@ export function Task(props:taskProps){
    }
 
    return(
+
     
             <div className={style.task}>
                 <label className={style.container}>

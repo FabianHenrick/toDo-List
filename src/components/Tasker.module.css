@@ -81,3 +81,18 @@
      color:var(--purple);
  }
  
+ .taskCounter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 10px;
+    text-align:center;
+    background-color:var(--gray-400);
+    border-radius:10px;
+ }
+.taskCounters{
+    display:flex;
+    gap:0.5rem;
+}

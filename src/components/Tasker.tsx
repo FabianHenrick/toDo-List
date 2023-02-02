@@ -10,11 +10,17 @@ export function Tasker() {
 
     let [newTaskText, setNewTaskText] = useState('')
 
+    let [taskCount, setTaskCont] = useState<number>(0)
+
+    let [taskCompleted, setTaskeCompleted] = useState<number>(taskCount)
+
+
     function handleCreateNewTask(event:FormEvent){
         event.preventDefault()
         setTasks([...tasks, newTaskText])
         
         setNewTaskText('')
+        setTaskCont(taskCount +1)
     }
 
     function handleNewTaskChange(event:ChangeEvent<HTMLInputElement>){
@@ -22,10 +28,11 @@ export function Tasker() {
     }
 
     function deleteTask(taskToDelete:string){
+
         const tasksWithoutDeletedOne = tasks.filter(tasks =>{
             return tasks !==  taskToDelete
         })
-
+        setTaskCont(taskCount-1)
         setTasks(tasksWithoutDeletedOne)
     }
 
@@ -49,20 +56,20 @@ export function Tasker() {
             </div>
             <div className={style.tasker}>
             <div className={style.progress}>
-              <div>
+              <div className={style.taskCounters}>
                 <p className={style.taskNumber}>Tarefas criadas</p>
-                <p></p>
+                <p className={style.taskCounter}>{taskCount}</p>
               </div>
-              <div>
+              <div className={style.taskCounters}>
                 <p className={style.taskFinished}>Concluídas</p>
-                <p></p>
+                <p className={style.taskCounter}>{`${taskCount} de ${taskCompleted}`}</p>
               </div>
             </div >
               <div className={style.taskList}>
               {tasks.map(tasks => {
                 return(
                     <Task
-                        
+                        key={tasks}
                         content={tasks}
                         onDeleteTask={deleteTask}
                         
