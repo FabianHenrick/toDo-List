@@ -6,22 +6,41 @@ import {TaskList} from './components/TaskList'
 
 export function App() {
 
+  let [newTask, setNewtask] = useState<string[]>(['olá mundo'])
+
+
+
   return (
+
     <div className={style.wrapper} >
         <header className={style.header}>
           <img src="./src/assets/Logo.svg" className={style.logo} alt="Logo" />
         </header >
         <main className={style.main}>
-          <AddTask />
+          <AddTask 
+        
+          />
           <div className={style.tasker}>
             <div className={style.progress}>
-              <p className={style.taskNumber}>Tarefas criadas</p>
-              <p className={style.taskFinished}>Concluídas</p>
+              <div>
+                <p className={style.taskNumber}>Tarefas criadas</p>
+                <p></p>
+              </div>
+              <div>
+                <p className={style.taskFinished}>Concluídas</p>
+                <p></p>
+              </div>
             </div >
               <div className={style.taskList}>
-              <TaskList />
-              <TaskList />
-              <TaskList />
+              <TaskList
+                task='beber 2L água hoje!'
+              />
+              <TaskList 
+                task = 'Estudar 2 horas!' 
+              />
+              <TaskList 
+                task = 'Me Exercitar'
+              />
             </div>
           </div>
 
