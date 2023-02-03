@@ -1,7 +1,7 @@
 # toDo-List
 Desafio 01 do módulo de React  -  Ignite da Rocket Seat
 
-Situação do Projeto: 90% concluído.
+Situação do Projeto: 80% concluído.
 
   Faltando :
 - exibição de mensagem quando não houver nenhuma task(esse é por falta de tempo mesmo)
